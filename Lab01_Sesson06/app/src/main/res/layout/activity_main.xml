@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.example.windykiss.lab01_sesson06.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#e12e2e">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/home_shape" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:scaleType="center"
+                android:background="@drawable/code_shape" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:scaleType="center"
+                android:background="@drawable/alarm_shape" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:scaleType="center"
+                android:background="@drawable/person_shape" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:background="@drawable/girl_fashion">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Women"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:background="@drawable/men_fashion">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Men"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:background="@drawable/kids_fashion">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Kids"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+</LinearLayout>
