@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="65"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_item_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:text="ABCDEF"
+
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_detail"
+            android:text="10m" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="35"
+        android:layout_height="match_parent">
+
+        <com.example.windykiss.lab01_sesson06.MeasureIV2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/iv_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                android:background="@drawable/item1"
+                android:scaleType="centerCrop" />
+
+        </com.example.windykiss.lab01_sesson06.MeasureIV2>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
