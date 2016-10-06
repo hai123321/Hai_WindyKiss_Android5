@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.windykiss.lab03.Fragment03"
+    android:background="#50e3ac">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        >
+
+
+
+
+        <TextView
+            android:id="@+id/tv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:text="Payment\nsuccessful"
+            />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_02"
+            android:layout_below="@id/tv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#338c78"
+            android:textSize="30sp"
+            android:text="40,00 $"
+            />
+        <TextView
+            android:id="@+id/tv_03"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/tv_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:text="RECEPIENT"
+            />
+        <TextView
+            android:id="@+id/tv_04"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tv_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#338c78"
+            android:textSize="20sp"
+            android:text="Lester Nygaard"
+            />
+        <TextView
+            android:id="@+id/tv_05"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tv_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:text="Note"
+            />
+
+        <TextView
+            android:id="@+id/tv_06"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tv_05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#338c78"
+            android:textSize="20sp"
+            android:text="It was a humorously perilous\nbusiness for both of us"
+            />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/icon_check"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

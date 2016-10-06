@@ -1,0 +1,169 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.windykiss.lab03.Fragment04"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#00b9e6"
+        >
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_menu"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@id/iv_menu"
+            android:layout_centerInParent="true"
+            android:text="Settings"
+            />
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30">
+
+        <TextView
+            android:id="@+id/tv_02"
+            android:layout_below="@id/tv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Flashlight"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:id="@+id/tv_03"
+            android:layout_below="@id/tv_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Wifi"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_02"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_03"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/tv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Switches"
+            android:textSize="20sp"
+            android:textColor="#afafaf"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/tv_02"
+            android:layout_alignStart="@+id/tv_02" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30">
+
+        <TextView
+            android:id="@+id/tv_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Radio Buttons"
+            android:textSize="20sp"
+            android:textColor="#afafaf"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentTop="true" />
+        <RadioGroup
+            android:layout_below="@id/tv_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_margin="10dp"
+                android:checked="true"
+                android:id="@+id/rb_01"
+                android:layout_below="@id/tv_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="If this is turned on"/>
+
+            <RadioButton
+                android:id="@+id/rb_02"
+                android:layout_margin="10dp"
+                android:layout_below="@id/rb_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This one must be turned off"/>
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30">
+
+        <TextView
+            android:id="@+id/tv_05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Volume Slider"
+            android:textSize="20sp"
+            android:textColor="#afafaf"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/tv_06"
+            android:layout_below="@id/tv_05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="If this is turned on"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            />
+        <SeekBar
+            android:layout_below="@id/tv_06"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

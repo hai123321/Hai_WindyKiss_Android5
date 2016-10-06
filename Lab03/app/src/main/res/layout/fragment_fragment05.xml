@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.windykiss.lab03.Fragment05"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#00b9e6"
+        >
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_menu"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@id/iv_menu"
+            android:layout_centerInParent="true"
+            android:text="Settings"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30">
+        <TextView
+            android:id="@+id/tv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:text="Multiple Selection"
+
+            />
+        <TextView
+            android:id="@+id/tv_02"
+            android:layout_below="@id/tv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Notification Ringtone"
+
+            />
+        <TextView
+            android:id="@+id/tv_03"
+            android:layout_below="@id/tv_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:text="Wilhelm Scream"
+
+            />
+        <TextView
+            android:id="@+id/tv_04"
+            android:layout_below="@id/tv_03"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:text="Favourite Color"
+
+            />
+        <TextView
+            android:id="@+id/tv_05"
+            android:layout_below="@id/tv_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Yellow"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30">
+
+        <TextView
+            android:id="@+id/tv_06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:text="Checkboxes"
+
+            />
+
+        <CheckBox
+            android:id="@+id/cb_01"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tv_06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple juice"
+            />
+        <CheckBox
+            android:id="@+id/cb_02"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:checked="true"
+            android:layout_below="@id/cb_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orange juice"
+            />
+        <CheckBox
+            android:id="@+id/cb_03"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:checked="true"
+            android:layout_below="@id/cb_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Craft beer"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"></RelativeLayout>
+
+</LinearLayout>
