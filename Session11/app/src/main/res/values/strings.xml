@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Session11</string>
+    <string name="title_text">Title</string>
+    <string name="content_text">Content</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_text">Your Name:</string>
+</resources>
