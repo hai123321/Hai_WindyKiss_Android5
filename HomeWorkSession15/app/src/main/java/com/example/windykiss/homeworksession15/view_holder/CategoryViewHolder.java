@@ -15,11 +15,8 @@ import butterknife.ButterKnife;
  * Created by WindyKiss on 10/25/2016.
  */
 
-public class CategoryViewHolder extends RecyclerView.ViewHolder {
-    @BindView(R.id.iv)
-    ImageView iv;
-
-    @BindView(R.id.tv)
+public class CategoryViewHolder extends RecyclerView.ViewHolder{
+    @BindView(R.id.tv_title)
     TextView tv;
     public CategoryViewHolder(View itemView) {
         super(itemView);
@@ -27,7 +24,6 @@ public class CategoryViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(CategoryModel categoryModel){
-        iv.setImageResource(categoryModel.getImgID());
         tv.setText(categoryModel.getTitle());
     }
 }
