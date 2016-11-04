@@ -11,7 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.windykiss.homework15_0102.Services.Foo;
 import com.example.windykiss.homework15_0102.models.LoginModel;
+import com.example.windykiss.homework15_0102.models.PostModel;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -26,6 +28,8 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import retrofit2.GsonConverterFactory;
+import retrofit2.Retrofit;
 
 
 /**
@@ -42,7 +46,7 @@ public class LoginFragment extends Fragment {
     Button btn;
     private static final String TAG = LoginFragment.class.getName();
 
-    private String URL = "https://a5-tumblelog.herokuapp.com/api/login";
+    private String URL = "https://a5-tumblelog.herokuapp.com";
     String responseBodyString;
 
     public LoginFragment() {
@@ -66,9 +70,46 @@ public class LoginFragment extends Fragment {
             public void onClick(View v) {
                 String username = et_username.getText().toString();
                 String password = et_password.getText().toString();
-                sendPOSTRequest("json", username, password);
+//                sendPOSTRequest("json", username, password);
+                sendPostRequestRetrofit(username, password);
             }
         });
+    }
+
+    private void sendPostRequestRetrofit(String username, String password) {
+        Retrofit loginRetrofit = new Retrofit.Builder()
+                .baseUrl(URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        LoginPostJsonModel loginPostJsonModel = new LoginPostJsonModel(username, password);
+
+        String body = new Gson().toJson(loginPostJsonModel);
+
+        RequestBody requestBody = RequestBody.create(
+                MediaType.parse("application/json"),
+                body
+        );
+
+        Foo foo = loginRetrofit.create(Foo.class);
+        foo
+                .postJson(requestBody)
+                .enqueue(new retrofit2.Callback<LoginModel>() {
+                    @Override
+                    public void onResponse(retrofit2.Call<LoginModel> call, retrofit2.Response<LoginModel> response) {
+                        Log.d(TAG, "onResponse");
+                        LoginModel login = response.body();
+                        if(login.getCode().equals("1"))
+                            makeToats("Login success!!");
+                        else
+                            makeToats("Login failed!!");
+                    }
+
+                    @Override
+                    public void onFailure(retrofit2.Call<LoginModel> call, Throwable t) {
+                        Log.d(TAG, "onFailure");
+                    }
+                });
     }
 
     private void sendPOSTRequest(String type, String username, String password) {

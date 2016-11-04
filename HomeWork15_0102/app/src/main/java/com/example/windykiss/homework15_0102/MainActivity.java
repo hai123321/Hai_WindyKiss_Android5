@@ -1,8 +1,8 @@
 package com.example.windykiss.homework15_0102;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
 //        sendGETRequest();
 
     }
-
 
     private void sendGETRequest() {
 

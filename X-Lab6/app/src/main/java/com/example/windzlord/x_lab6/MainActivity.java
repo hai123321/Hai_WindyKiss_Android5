@@ -16,6 +16,7 @@ import com.example.windzlord.x_lab6.fragments.QuoteFragment;
 import com.example.windzlord.x_lab6.fragments.RegisterFragment;
 import com.example.windzlord.x_lab6.jsonmodels.FlickrFeed;
 import com.example.windzlord.x_lab6.jsonmodels.PlaceJSONModel;
+import com.example.windzlord.x_lab6.managers.DBContext;
 import com.example.windzlord.x_lab6.managers.NetworkManager;
 import com.example.windzlord.x_lab6.managers.Preferences;
 import com.example.windzlord.x_lab6.models.FragmentEvent;
@@ -71,12 +72,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupUI_0() {
+        DBContext.init(this);
         EventBus.getDefault().register(this);
 //        if (Preferences.getInstance().getUsername() == null) {
 //            changeFragment(new RegisterFragment(), false);
 //        } else
-            changeFragment(new QuoteFragment(), false);
-
+        changeFragment(new QuoteFragment(), false);
         if (NetworkManager.getInstance().isConnectedToInternet()) {
             Intent intent = new Intent(this, UnplashDownloadService.class);
             startService(intent);

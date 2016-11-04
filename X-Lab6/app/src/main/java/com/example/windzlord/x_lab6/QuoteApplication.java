@@ -1,16 +1,13 @@
 package com.example.windzlord.x_lab6;
 
 import android.app.Application;
-import android.content.Intent;
-import android.icu.text.LocaleDisplayNames;
 import android.util.Log;
 
-import com.example.windzlord.x_lab6.managers.DBHelper;
+import com.example.windzlord.x_lab6.managers.DBContext;
 import com.example.windzlord.x_lab6.managers.FileManager;
 import com.example.windzlord.x_lab6.managers.NetworkManager;
 import com.example.windzlord.x_lab6.managers.Preferences;
 import com.example.windzlord.x_lab6.models.Quote;
-import com.nostra13.universalimageloader.cache.disc.DiskCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -32,7 +29,7 @@ public class QuoteApplication extends Application {
         Preferences.init(this);
         NetworkManager.init(this);
         FileManager.init(this);
-        DBHelper.init(this);
+//        DBContext.init(this);
 
 
 
@@ -48,9 +45,7 @@ public class QuoteApplication extends Application {
 
 //        DBHelper.getInstance().delete(quote);
 
-        for (Quote q : DBHelper.getInstance().selectAllQuote()){
-            Log.d(TAG, q.toString() + q.getContent());
-        }
+
 //        Log.d(TAG, DBHelper.getInstance().getRandomQuote().toString());
     }
 }

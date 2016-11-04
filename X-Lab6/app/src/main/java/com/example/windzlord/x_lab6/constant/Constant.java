@@ -11,7 +11,7 @@ public class Constant {
     public static String UNSPLASH_API = String.format("https://source.unsplash.com/category/%s/%dx%d",
             CATEGORIES[2], SIZE_WIDTH, SIZE_HEIGHT);
 
-    public static String QUOTE_API = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+    public static String QUOTE_API = "http://quotesondesign.com/wp-json/";
 
     public static String PLACE = "http://jsonplaceholder.typicode.com/posts";
 

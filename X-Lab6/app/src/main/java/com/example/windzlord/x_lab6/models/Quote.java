@@ -1,22 +1,27 @@
 package com.example.windzlord.x_lab6.models;
 
+import io.realm.RealmModel;
+import io.realm.RealmObject;
+
 /**
  * Created by WindzLord on 10/26/2016.
  */
 
-public class Quote {
+public class Quote extends RealmObject {
     private int id;
     private String title;
     private String content;
 
-    public Quote(int id, String title, String content) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
+    public Quote() {
     }
 
-    public Quote(String title, String content) {
-        this(-1, title, content);
+
+    public static Quote create(String title, String content) {
+        Quote quote = new Quote();
+        quote.id = -1;
+        quote.title = title;
+        quote.content = content;
+        return quote;
     }
 
     public int getId() {
